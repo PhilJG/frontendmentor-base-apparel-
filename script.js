@@ -1,13 +1,16 @@
 const form = document.getElementById("form");
-const email = document.getElementById("email").value;
+const email = document.getElementById("email");
 const button = document.getElementById("btn");
 const text = document.getElementById("text");
 const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
+let inputValue = "";
+
 function validation() {
 
+        inputValue = email.value;
 
-        if (email.match(pattern)) 
+        if (inputValue.match(pattern)) 
         {
             form.classList.add("valid");
             form.classList.remove("invalid");
