@@ -1,216 +1,218 @@
 :root {
-    --desaturated-red: hsl(0, 36%, 70%);
-    --soft-red: hsl(0, 93%, 68%);
-    --dark-grayish-red: hsl(0, 6%, 24%);
-
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 16px;
-    background-image: url(./images/bg-pattern-desktop.svg);
+  font-size: 16px;
+  background-image: url(./images/bg-pattern-desktop.svg);
 }
 
-
-h1, h2, p {
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    
+h1,
+h2,
+p {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 
-h1, h2 {
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    letter-spacing: .5rem;
-    
+h1,
+h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
 }
 
 h1 {
-    color: var(--desaturated-red);
-    font-weight: 300;
+  color: var(--desaturated-red);
+  font-weight: 300;
 }
 
 h2 {
-    font-weight: 400;
- 
+  font-weight: 400;
 }
 
 p {
-    color: var(--desaturated-red);
-    line-height: 1.5;
+  color: var(--desaturated-red);
+  line-height: 1.5;
 }
 main {
-    display: grid;
-    grid-template-rows: 1fr;
+  display: grid;
+  grid-template-rows: 1fr;
 }
 
 /* Header */
 header {
-    padding: 2rem 2rem 2rem 2rem;
-    position: relative;
-    z-index: 0;
-    background-color: transparent;
+  padding: 2rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
 }
 
 /* Content */
 
 .content {
-    padding: 0 1.25rem 5rem 1.25rem;
-    margin: 0;
-    
+  padding: 0 1.25rem 5rem 1.25rem;
+  margin: 0;
 }
-
 
 .img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(images/hero-mobile.jpg);
-    background-position: top;
-    height: 50vh;
-    width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(images/hero-mobile.jpg);
+  background-position: top;
+  height: 50vh;
+  width: 100vw;
 }
-/* Input */ 
+/* Input */
 
 .input-span {
-    position: relative;
-    display: block;
-    padding-top: 3rem;
+  position: relative;
+  display: block;
+  padding-top: 3rem;
 }
 
 .btn {
-    background-image: linear-gradient(to right, hsl(0, 80%, 86%) 5%, hsl(0, 74%, 74%) 100%);
-    background-size: cover;
-    border: none;
-    padding: .5rem 1rem;
-    margin: 0;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.25rem;
-    cursor: pointer;
-    border-radius: 20px;
-    position: absolute;
-    right: 0;
-    filter: drop-shadow(0 10px 4mm lightgrey);
-    }
-
-    /*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
-    .btn:active {
-        transform: matrix(1.1, 0, 0, 1.1, 1, 1);
-        background-image: linear-gradient(to right, hsl(0, 80%, 86%) 100%, hsl(0, 74%, 74%) 5%);
-        
-    }
-
-
-.email-input {
-    color: var(--desaturated-red);
-    padding: .65rem;
-    border-radius: 30px;
-    border-style:solid;
-    width: auto;
-    width: 100%;
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%) 5%,
+    hsl(0, 74%, 74%) 100%
+  );
+  background-size: cover;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  filter: drop-shadow(0 10px 4mm lightgrey);
 }
 
-.email-input:valid {
-    border: 2px solid green;
+/*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+.btn:active {
+  transform: matrix(1.1, 0, 0, 1.1, 1, 1);
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%) 100%,
+    hsl(0, 74%, 74%) 5%
+  );
+}
+
+.email-input {
+  color: var(--desaturated-red);
+  padding: 0.65rem;
+  border-radius: 30px;
+  border-style: solid;
+  width: auto;
+  width: 100%;
+  outline: none;
+}
+
+/* .email-input:valid {
+  border: 2px solid green;
 }
 
 .email-input:invalid {
-    border: 2px solid red;
-}
-
-
+  border: 2px solid red;
+} */
 
 #text {
-    display: block;
-    color: #000;
-    font-weight: 400;
-    padding: 5px;
-
+  display: block;
+  color: #000;
+  font-weight: 400;
+  padding: 5px;
 }
 
 #form.invalid .input-box:before {
-    content: '';
-    position: absolute;
-    right: 75px;
-    bottom:   55px;
-    width: 24px;
-    height: 24px;
-    background: url(./images/invalid.png);
-    background-size: cover;
-    z-index: 1000;
+  content: "";
+  position: absolute;
+  right: 75px;
+  bottom: 55px;
+  width: 24px;
+  height: 24px;
+  background: url(./images/invalid.png);
+  background-size: cover;
+  z-index: 1000;
 }
 
 #form.valid .input-box:before {
-    content: '';
-    position: absolute;
-    right: 75px;
-    bottom:   55px;
-    width: 24px;
-    height: 24px;
-    background: url(./images/valid.png);
-    background-size: cover;
-    z-index: 1000;
+  content: "";
+  position: absolute;
+  right: 75px;
+  bottom: 55px;
+  width: 24px;
+  height: 24px;
+  background: url(./images/valid.png);
+  background-size: cover;
+  z-index: 1000;
 }
 
 @media screen and (min-width: 375px) {
-    
-    main {
-        grid-template-columns: 1fr 45%;
-        grid-auto-flow: row;
-    }
+  main {
+    grid-template-columns: 1fr 45%;
+    grid-auto-flow: row;
+  }
 
-    main .col:nth-of-type(1) {
-        order: 2;
-    }
+  main .col:nth-of-type(1) {
+    order: 2;
+  }
 
-    main .col:nth-of-type(2) {
-        order: 1;
-    }
+  main .col:nth-of-type(2) {
+    order: 1;
+  }
 
+  /*Layout */
 
-    /*Layout */
-    .content {
-        padding: 6rem;
-        padding-top: 8rem;
-    }
+  .col__content {
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    padding: 6rem;
+    padding-top: 8rem;
+  }
 
-    h1, h2 {
-        font-size: 3rem;
-    }
-    h1, h2, p {
-        text-align: left;
-    }
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
 
-    .btn {
-        padding: .5rem 1.5rem;
-    }
+  .btn {
+    padding: 0.5rem 1.5rem;
+  }
 
+  /* Heading */
+  header {
+    position: absolute;
+    padding-left: 6rem;
+  }
 
-    /* Heading */
-    header {
-        position: absolute;
-        padding-left: 6rem;
-    }
+  /* Hero */
+  .img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url(images/hero-desktop.jpg);
+    width: 100%;
+    height: 100vh;
+  }
 
-    /* Hero */
-    .img {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top; 
-        background-image: url(images/hero-desktop.jpg);
-        width: 100%;
-        height: 100vh;
-    }
-
-    .input-span {
-        padding-top: 3rem;
-    }
-
-} 
+  .input-span {
+    padding-top: 3rem;
+  }
+}

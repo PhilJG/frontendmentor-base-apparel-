@@ -6,32 +6,26 @@ const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 let inputValue = "";
 
-function validation() {
+btn.addEventListener("click", function validation() {
+  inputValue = email.value;
 
-        inputValue = email.value;
-
-        if (inputValue.match(pattern)) 
-        {
-            form.classList.add("valid");
-            form.classList.remove("invalid");
-            text.style.color = "green";
-            text.innerHTML = "Your Email Address is Valid";
-            text.style.fontFamily = "Josefin Sans";
-            text.style.fontSize = ".75rem";
-            text.style.padding = "1rem";  
-        }
-        else 
-        {
-            form.classList.remove("valid");
-            form.classList.add("invalid");
-            text.innerHTML = "Please provide a valid email";
-            text.style.color = "#ff0000";
-            text.style.fontFamily = "Josefin Sans";
-            text.style.fontSize = ".75rem";
-            text.style.padding = "1rem";
-           
-        }
-
-
-    
-}
+  if (inputValue.match(pattern)) {
+    // form.classList.add("valid");
+    // form.classList.remove("invalid");
+    text.style.color = "green";
+    text.innerHTML = "Your Email Address is Valid";
+    text.style.fontFamily = "Josefin Sans";
+    text.style.fontSize = ".75rem";
+    text.style.padding = "1rem";
+    email.style.border = "2px solid green";
+  } else {
+    // form.classList.remove("valid");
+    // form.classList.add("invalid");
+    text.innerHTML = "Please provide a valid email";
+    text.style.color = "#ff0000";
+    text.style.fontFamily = "Josefin Sans";
+    text.style.fontSize = ".75rem";
+    text.style.padding = "1rem";
+    email.style.border = "2px solid red";
+  }
+});
